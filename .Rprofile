@@ -1,2 +1,5 @@
 source("renv/activate.R")
-renv::restore()
+
+setHook("rstudio.sessionInit", function(...) {
+  renv::restore()
+})
