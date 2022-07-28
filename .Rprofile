@@ -1,5 +1,5 @@
 source("renv/activate.R")
 
 setHook("rstudio.sessionInit", function(...) {
-  renv::restore()
+  renv::restore(prompt = FALSE)
 })
